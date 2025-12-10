@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+SQLAlchemy
+email-validator
+tzdata
+psycopg2-binary
