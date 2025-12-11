@@ -18,6 +18,8 @@ jobs:
 
             - name: Instalar dependências com o Poetry
               run: poetry install --no-root
+              working-directory: ./portfolio-crud-postgres-fastapi-streamlit
 
             - name: Rodar minha rotina de testes com o Poetry
               run: poetry run pytest tests -v
+              working-directory: ./portfolio-crud-postgres-fastapi-streamlit
