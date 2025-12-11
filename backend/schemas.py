@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr, PositiveFloat, ConfigDict
+from pydantic import BaseModel, ConfigDict, EmailStr, PositiveFloat
 
 
 class ProductBase(BaseModel):

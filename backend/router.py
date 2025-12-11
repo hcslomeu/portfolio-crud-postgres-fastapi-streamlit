@@ -1,5 +1,8 @@
 from typing import List
 
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+
 from .crud import (
     create_product,
     delete_product,
@@ -8,9 +11,7 @@ from .crud import (
     update_product,
 )
 from .database import SessionLocal, get_db
-from fastapi import APIRouter, Depends, HTTPException
 from .schemas import ProductCreate, ProductResponse, ProductUpdate
-from sqlalchemy.orm import Session
 
 router = APIRouter()
 
