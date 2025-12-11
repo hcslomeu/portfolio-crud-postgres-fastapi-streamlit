@@ -4,3 +4,9 @@ SQLAlchemy
 email-validator
 tzdata
 psycopg2-binary
+
+pandas
+mkdocs
+mermaid
+mkdocs-material
+streamlit
