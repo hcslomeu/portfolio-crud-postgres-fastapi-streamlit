@@ -6,7 +6,10 @@ tzdata
 psycopg2-binary
 
 pandas
+streamlit
+
 mkdocs
 mermaid
 mkdocs-material
-streamlit
+mkdocstrings-python
+taskipy

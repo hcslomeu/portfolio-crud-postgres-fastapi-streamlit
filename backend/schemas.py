@@ -1,7 +1,9 @@
-from pydantic import BaseModel, PositiveFloat, EmailStr
-from enum import Enum
 from datetime import datetime
+from enum import Enum
 from typing import Optional
+
+from pydantic import BaseModel, EmailStr, PositiveFloat, ConfigDict
+
 
 class ProductBase(BaseModel):
 
@@ -11,15 +13,17 @@ class ProductBase(BaseModel):
     category: str
     email_supplier: EmailStr
 
+
 class ProductCreate(ProductBase):
     pass
+
 
 class ProductResponse(ProductBase):
     id: int
     created_at: datetime
 
-    class Config:
-        from_attributes: True
+    model_config = ConfigDict(from_attributes=True)
+
 
 class ProductUpdate(ProductBase):
     name: Optional[str] = None
